@@ -1,0 +1,106 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "6dc2808ef00cb0697a7cbe93caf8e152",
+    "entities": [
+      {
+        "tableName": "offlinemapni",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER, `khetarCode` TEXT, `sabhaCode` TEXT, `polygon` TEXT, `polygonImage` TEXT, `khetarImage` TEXT, `totalAcre` TEXT, `northKhetarName` TEXT, `southKhetarName` TEXT, `eastKhetarName` TEXT, `westKhetarName` TEXT, `chasNumber` TEXT, `chasDirection` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "khetarCode",
+            "columnName": "khetarCode",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "sabhaCode",
+            "columnName": "sabhaCode",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "polygon",
+            "columnName": "polygon",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "polygonImage",
+            "columnName": "polygonImage",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "khetarImage",
+            "columnName": "khetarImage",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "totalAcre",
+            "columnName": "totalAcre",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "northKhetarName",
+            "columnName": "northKhetarName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "southKhetarName",
+            "columnName": "southKhetarName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "eastKhetarName",
+            "columnName": "eastKhetarName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "westKhetarName",
+            "columnName": "westKhetarName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "chasNumber",
+            "columnName": "chasNumber",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "chasDirection",
+            "columnName": "chasDirection",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '6dc2808ef00cb0697a7cbe93caf8e152')"
+    ]
+  }
+}

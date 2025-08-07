@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".screens.attendance.view.AttendanceListActivity">
+
+    <androidx.appcompat.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:theme="@style/myToolbarTheme"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:titleTextColor="@color/primary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/_36sdp"
+                android:layout_height="@dimen/_36sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:padding="@dimen/_12sdp"
+                app:srcCompat="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/iv_back"
+                android:fontFamily="@font/rasa_bold"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="@string/attendance"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_in"
+                android:visibility="gone"
+                android:layout_width="@dimen/_65sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_toStartOf="@+id/card_out"
+                android:elevation="@dimen/_4sdp"
+                app:cardBackgroundColor="@color/card_back"
+                app:cardCornerRadius="@dimen/_12sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_20sdp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:gravity="center_vertical"
+                        android:src="@drawable/ic_in" />
+
+                    <TextView
+                        style="@style/InternSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:text="@string/in_time"
+                        android:textColor="@color/green_light"
+                        android:textSize="@dimen/_8sdp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_out"
+                android:visibility="gone"
+                android:layout_width="@dimen/_75sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:elevation="@dimen/_4sdp"
+                app:cardBackgroundColor="@color/card_back"
+                app:cardCornerRadius="@dimen/_12sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_20sdp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:gravity="center_vertical"
+                        android:src="@drawable/ic_out" />
+
+                    <TextView
+                        style="@style/InternSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:text="@string/out_time"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/_8sdp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/_12sdp"
+        android:paddingRight="@dimen/_12sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="@string/from_date"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:background="@drawable/square_border_form_edittext"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:digits="0123465789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+                android:drawableEnd="@drawable/ic_calendar_green"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/rasa_regular"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="text|date"
+                android:lines="1"
+                android:maxLength="42"
+                android:paddingLeft="@dimen/_6sdp"
+                android:paddingTop="@dimen/_4sdp"
+                android:paddingRight="@dimen/_6sdp"
+                android:paddingBottom="@dimen/_4sdp"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:src="@drawable/ic_arrow_right_green" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="@string/to_date"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:background="@drawable/square_border_form_edittext"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:digits="0123465789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+                android:drawableEnd="@drawable/ic_calendar_green"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/rasa_regular"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="text|date"
+                android:lines="1"
+                android:maxLength="42"
+                android:paddingLeft="@dimen/_6sdp"
+                android:paddingTop="@dimen/_4sdp"
+                android:paddingRight="@dimen/_6sdp"
+                android:paddingBottom="@dimen/_4sdp"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="@dimen/_12sdp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_submit"
+        style="@style/Regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginRight="@dimen/_14sdp"
+        android:background="@drawable/button_square_green"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_34sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:background="@drawable/border_grey"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/InternSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="@string/tarikh_guj"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <View
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"
+            android:background="@color/border" />
+
+        <TextView
+            style="@style/InternSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="@string/in_time"
+            android:textColor="@color/green_light"
+            android:textSize="@dimen/_10sdp" />
+
+        <View
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"
+            android:background="@color/border" />
+
+        <TextView
+            style="@style/InternSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="@string/out_time"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_10sdp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_no_history"
+        style="@style/InternRegular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/no_history"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16sdp"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_attendance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        tools:listitem="@layout/item_attendance" />
+
+</LinearLayout>

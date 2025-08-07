@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".screens.khetarmapni.view.MapKhetarMapniAutoActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_simple" />
+
+    <com.narmada.measure.utils.SquareLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+
+        <com.mapbox.mapboxsdk.maps.MapView
+            android:id="@+id/map_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.narmada.measure.utils.SquareLayout>
+
+    <!--<RelativeLayout
+        android:id="@+id/relative_submit"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_65sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/button_circle_green"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:fontFamily="@font/rasa_regular"
+            android:text="@string/cont"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_17sdp"
+            tools:ignore="RelativeOverlap" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:src="@drawable/ic_right_arrow_white" />
+
+    </RelativeLayout>-->
+
+</RelativeLayout>

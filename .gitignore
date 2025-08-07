@@ -1,0 +1,32 @@
+# Gradle files
+.gradle/
+app/build/
+build/
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Log/OS Files
+*.log
+
+# Android Studio generated files and folders
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+output.json
+
+# IntelliJ
+*.iml
+.idea/
+misc.xml
+deploymentTargetDropDown.xml
+render.experimental.xml
+
+# Android Profiling
+*.hprof
+
+#Exclude release builds
+/app/agriSupervisorUat
+/app/agriSupervisorLive
+/app/kapniSupervisorUat
+/app/kapniSupervisorLive

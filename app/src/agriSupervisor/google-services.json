@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "438023359466",
+    "project_id": "narmadakhand-9b67e",
+    "storage_bucket": "narmadakhand-9b67e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:438023359466:android:e5f09b99685bf220a04093",
+        "android_client_info": {
+          "package_name": "com.narmada.khandudhyog"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNXyOe85ukZU-t2gC36MO-m9UChCkjx0I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:438023359466:android:53499fa653136d53a04093",
+        "android_client_info": {
+          "package_name": "com.narmada.measure"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNXyOe85ukZU-t2gC36MO-m9UChCkjx0I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

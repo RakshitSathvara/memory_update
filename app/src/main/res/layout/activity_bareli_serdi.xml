@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".screens.bareliserdi.view.BareliSerdiActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_simple" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_18sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:fontFamily="@font/rasa_bold"
+                        android:text="@string/tarikh_guj"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14sdp"
+                          />
+
+                    <EditText
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:id="@+id/et_tarikh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:background="@drawable/rounded_border_form_edittext"
+                        android:drawableEnd="@drawable/ic_calendar"
+                        android:fontFamily="@font/rasa_regular"
+                        android:hint="@string/tarikh_guj"
+                        android:importantForAutofill="no"
+                        android:inputType="none"
+                        android:lines="1"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:textSize="@dimen/_15sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:fontFamily="@font/rasa_bold"
+                        android:text="@string/samay_guj"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14sdp"
+                          />
+
+                    <EditText
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:id="@+id/et_samay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:background="@drawable/rounded_border_form_edittext"
+                        android:drawableEnd="@drawable/ic_time"
+                        android:fontFamily="@font/rasa_regular"
+                        android:hint="@string/samay_guj"
+                        android:importantForAutofill="no"
+                        android:inputType="none"
+                        android:lines="1"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:textSize="@dimen/_15sdp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/rasa_bold"
+                android:text="@string/khetar_code_guj"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                  />
+
+            <EditText
+                android:id="@+id/et_khetar_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/rounded_border_form_edittext"
+                android:digits="0123465789"
+                android:fontFamily="@font/rasa_regular"
+                android:hint="@string/khetar_code_guj"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLines="1"
+                android:maxLength="9"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="@dimen/_15sdp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_khetar_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_toStartOf="@+id/btn_fetch_details"
+                    android:fontFamily="@font/rasa_bold"
+                    android:gravity="center"
+                    android:text="@string/code_verified"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/_15sdp"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_fetch_details"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_gravity="end"
+                    android:layout_alignParentEnd="true"
+                    android:backgroundTint="@color/primary"
+                    android:fontFamily="@font/rasa_regular"
+                    android:text="@string/fetch_details"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp" />
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/rasa_bold"
+                android:text="@string/sabha_code_guj"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp" />
+
+            <EditText
+                android:enabled="false"
+                android:id="@+id/et_sabha_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/rounded_border_form_edittext"
+                android:digits="0123465789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+                android:fontFamily="@font/rasa_regular"
+                android:hint="@string/sabha_code_guj"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="textNoSuggestions"
+                android:lines="1"
+                android:maxLength="42"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="@dimen/_15sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/rasa_bold"
+                android:text="@string/sabha_name_guj"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                  />
+
+            <EditText
+                android:enabled="false"
+                android:id="@+id/et_sabha_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/rounded_border_form_edittext"
+                android:digits="0123465789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+                android:fontFamily="@font/shree_guj"
+                android:hint="@string/sabha_name_guj"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="textNoSuggestions"
+                android:lines="1"
+                android:maxLength="42"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="@dimen/_14sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/rasa_bold"
+                android:text="@string/sabha_gaam_guj"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                  />
+
+            <EditText
+                android:enabled="false"
+                android:id="@+id/et_sabha_gaam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/rounded_border_form_edittext"
+                android:digits="0123465789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+                android:fontFamily="@font/shree_guj"
+                android:hint="@string/sabha_gaam_guj"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="textNoSuggestions"
+                android:lines="1"
+                android:maxLength="42"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="@dimen/_14sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/rasa_bold"
+                android:text="@string/mode_gaam_guj"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                  />
+
+            <EditText
+                android:enabled="false"
+                android:id="@+id/et_moje_gaam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/rounded_border_form_edittext"
+                android:cursorVisible="false"
+                android:digits="0123465789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+                android:focusable="false"
+                android:fontFamily="@font/shree_guj"
+                android:hint="@string/mode_gaam_guj"
+                android:importantForAutofill="no"
+                android:inputType="none"
+                android:lines="1"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="@dimen/_14sdp" />
+<!--            android:drawableEnd="@drawable/ic_down_arrow_fill"-->
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/rasa_bold"
+                android:text="@string/kul_vistar_guj"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                  />
+
+            <EditText
+                android:enabled="false"
+                android:id="@+id/et_kul_vistar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/rounded_border_form_edittext"
+                android:digits="0123465789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+                android:fontFamily="@font/rasa_regular"
+                android:hint="@string/kul_vistar_guj"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="text|date"
+                android:lines="1"
+                android:maxLength="42"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="@dimen/_15sdp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/rasa_bold"
+                android:text="@string/paiki_barelo_vistar_guj"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                  />
+
+            <EditText
+                android:id="@+id/et_barelo_vistar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/rounded_border_form_edittext"
+                android:digits=".0123465789"
+                android:fontFamily="@font/rasa_regular"
+                android:hint="@string/paiki_barelo_vistar_guj"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:lines="1"
+                android:maxLength="10"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="@dimen/_15sdp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/rasa_bold"
+                android:text="@string/laam_date_guj"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                  />
+
+            <EditText
+                android:enabled="false"
+                android:id="@+id/et_laam_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/rounded_border_form_edittext"
+                android:digits="0123465789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+                android:fontFamily="@font/rasa_regular"
+                android:hint="@string/laam_date_guj"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="text|date"
+                android:lines="1"
+                android:maxLength="42"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="@dimen/_15sdp" />
+<!--            android:drawableEnd="@drawable/ic_calendar"-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/rasa_bold"
+                android:text="@string/serdi_bareli_tarikh_guj"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                  />
+
+            <EditText
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:id="@+id/et_serdi_bareli_tarikh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/rounded_border_form_edittext"
+                android:digits="0123465789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+                android:drawableEnd="@drawable/ic_calendar"
+                android:fontFamily="@font/rasa_regular"
+                android:hint="@string/serdi_bareli_tarikh_guj"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="text|date"
+                android:lines="1"
+                android:maxLength="42"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="@dimen/_15sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/rasa_bold"
+                android:text="@string/laam_ropan_guj"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                  />
+
+            <EditText
+                android:enabled="false"
+                android:id="@+id/et_laam_ropan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/rounded_border_form_edittext"
+                android:cursorVisible="false"
+                android:digits="0123465789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+                android:focusable="false"
+                android:fontFamily="@font/shree_guj"
+                android:hint="@string/laam_ropan_guj"
+                android:importantForAutofill="no"
+                android:inputType="none"
+                android:lines="1"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="@dimen/_14sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/rasa_bold"
+                android:text="@string/kapat_name_guj"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                  />
+
+            <EditText
+                android:id="@+id/et_kapat_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/rounded_border_form_edittext"
+                android:cursorVisible="false"
+                android:digits="0123465789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+                android:drawableEnd="@drawable/ic_down_arrow_fill"
+                android:focusable="false"
+                android:fontFamily="@font/shree_guj"
+                android:hint="@string/kapat_name_guj"
+                android:importantForAutofill="no"
+                android:inputType="none"
+                android:lines="1"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="@dimen/_14sdp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/rasa_bold"
+                android:text="@string/item_name_guj"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                  />
+
+            <EditText
+                android:enabled="false"
+                android:id="@+id/et_item_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/rounded_border_form_edittext"
+                android:cursorVisible="false"
+                android:digits="0123465789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+                android:focusable="false"
+                android:fontFamily="@font/rasa_regular"
+                android:hint="@string/item_name_guj"
+                android:importantForAutofill="no"
+                android:inputType="none"
+                android:lines="1"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="@dimen/_15sdp" />
+<!--            android:drawableEnd="@drawable/ic_down_arrow_fill"-->
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/rasa_bold"
+                android:text="@string/burn_form_number"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                />
+
+            <EditText
+                android:id="@+id/et_burn_form_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/rounded_border_form_edittext"
+                android:digits="0123465789"
+                android:fontFamily="@font/rasa_regular"
+                android:hint="@string/burn_form_number"
+                android:importantForAutofill="no"
+                android:inputType="none"
+                android:lines="1"
+                android:maxLength="10"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="@dimen/_15sdp"
+                android:enabled="false"
+                android:cursorVisible="false"
+                android:focusable="false"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/rasa_bold"
+                android:text="@string/photo_upload_guj"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                />
+
+            <EditText
+                android:id="@+id/et_photo_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/rounded_border_form_edittext"
+                android:cursorVisible="false"
+                android:digits="0123465789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+                android:drawableEnd="@drawable/ic_upload"
+                android:focusable="false"
+                android:fontFamily="@font/rasa_regular"
+                android:hint="@string/photo_upload_guj"
+                android:importantForAutofill="no"
+                android:inputType="none"
+                android:lines="1"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="@dimen/_14sdp" />
+
+            <RelativeLayout
+                android:id="@+id/relative_submit"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_65sdp"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:background="@drawable/button_circle_green"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:fontFamily="@font/rasa_bold"
+                    android:text="@string/submit"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_17sdp"
+                    tools:ignore="RelativeOverlap" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:src="@drawable/ic_right_arrow_white" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

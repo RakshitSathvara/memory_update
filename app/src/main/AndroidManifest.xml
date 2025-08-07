@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" /> <!-- <uses-feature -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <!-- android:name="android.hardware.camera" -->
+    <!-- android:required="true" /> -->
+    <!-- <uses-feature -->
+    <!-- android:name="android.hardware.camera.autofocus" -->
+    <!-- android:required="false" /> -->
+    <!-- <uses-permission android:name="android.permission.CAMERA" /> -->
+    <!-- <uses-feature -->
+    <!-- android:glEsVersion="0x00020000" -->
+    <!-- android:required="true" /> -->
+    <permission
+        android:name="com.example.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.permission.MAPS_RECEIVE" />
+
+    <application
+        android:name=".Application"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:fullBackupOnly="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Narmada"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup"
+        tools:targetApi="31">
+        <activity
+            android:name=".screens.kapni_complete_report_view.view.KapniPuriThayaniMahitiDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.admin_user.admin_login.AdminLoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".screens.admin_user.admin_dashboard.view.AdminDashboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".screens.admin_user.register_supervisor.RegisterSupervisorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.admin_user.scan_face.ScanFaceActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.kapni_complete_report_view.view.KapniPuriThayaniMahitiActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.kapni_supervisor.delivery_chalan.view.SerdiDeliveryChalanActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.kapni_supervisor.chalan_history.view.SerdiDeliveryHistoryActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" /> <!-- <meta-data -->
+        <!-- android:name="com.google.android.geo.API_KEY" -->
+        <!-- android:value="AIzaSyBsW2FYAxH2rAo1n9E6i7-m4adOlnsl6xs" /> -->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBsW2FYAxH2rAo1n9E6i7-m4adOlnsl6xs" />
+
+        <activity
+            android:name=".screens.splash.view.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".screens.login.view.LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.FullScreen" />
+        <activity
+            android:name=".screens.bareliserdi.view.BareliSerdiActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.khetarmapni.view.KhetarMapniActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.dashboard.view.DashboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".screens.khetarmapni.view.ReviewKhetarMapniActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.khetarmapni.view.MapKhetarMapniAutoActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.khetarmapni.view.MapKhetarMapniManualActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.khetarmapni.view.MapKhetarMapniPhotoActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.khetarmapni_offline.view.KhetarMapniOfflineActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.khetarmapni_offline.view.MapKhetarMapniOfflineActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.khetarmapni_offline.view.MapKhetarMapniOfflinePhotoActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.khetarmapni_offline.view.ReviewKhetarMapniOfflineActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.attendance.view.AttendanceListActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.attendance.view.AttendanceInOutActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.khetarmapni_offline.view.OfflineMapniListActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.khetarmapni_offline.view.KhetarMapniSyncActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.pani_bandh_register.view.PaniBandhRegisterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.pani_bandh_register.view.PaniBandhRegisterListActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.badeli_serdi_report.view.BadeliSerdiReportActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.khetar_mapni_report.view.KhetarMapniReportActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.ropan_register_report.view.RopanRegisterReportActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.sabhasad_mahiti.view.SabhasadMahitiActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.sabhasad_mahiti_update.view.SabhasadMahitiUpdateActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.kapni_supervisor.dashboard.view.KhetarKapniDashboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".screens.kapni_complete_report.view.KapniCompleteReportActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.pani_bandh_yaadi.view.PaniBandhYaadiActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.pani_bandh_yaadi.view.PaniBandhYaadiListActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.kapni_supervisor.delivery_chalan.view.VahanNumberSelectionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+        <activity
+            android:name=".screens.kapni_supervisor.delivery_chalan.view.MukadamNumberSelectionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar2" />
+
+        <receiver
+            android:name=".utils.DownloadCompletedReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    tools:context=".screens.dashboard.view.DashboardActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary">
+
+        <LinearLayout
+            android:id="@+id/linear_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:src="@drawable/ic_logout" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rasa_bold"
+                android:text="@string/logout"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_logout"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:fontFamily="@font/rasa_light"
+                    android:text="@string/name_guj"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sdp" />
+
+                <TextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/shree_guj"
+                    android:maxLines="2"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_zone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:fontFamily="@font/rasa_light"
+                    android:text="@string/zone_guj"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sdp" />
+
+                <TextView
+                    android:id="@+id/txt_zone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/shree_guj"
+                    android:maxLines="2"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/linear_info"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@drawable/rounded_border_shape_white"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_60sdp"
+                android:alpha="0.05"
+                android:src="@mipmap/app_logo_dark" />
+
+            <LinearLayout
+                android:id="@+id/linear_season"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginRight="@dimen/_16sdp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:fontFamily="@font/rasa_light"
+                    android:text="@string/roapn_guj"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16sdp" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sp_year"
+                    android:layout_width="@dimen/_110sdp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner_background" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_measure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_season"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/square_border_dashboard"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_15sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:src="@drawable/ic_measure" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:fontFamily="@font/rasa_bold"
+                    android:text="@string/farm_measure_guj"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_measure"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/square_border_dashboard"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_15sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:src="@drawable/ic_file" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:fontFamily="@font/rasa_bold"
+                    android:text="@string/serdi_form"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_offline_mapni"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_form"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/square_border_dashboard"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_15sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:src="@drawable/ic_measure_offline" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:fontFamily="@font/rasa_bold"
+                    android:text="@string/offline_khetar_mapni"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_attendance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_offline_mapni"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/square_border_dashboard"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_15sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:src="@drawable/ic_attendance" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:fontFamily="@font/rasa_bold"
+                    android:text="@string/attendance"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_pani_bandh_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_attendance"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/square_border_dashboard"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_15sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:src="@drawable/ic_pani_bandh_register" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:fontFamily="@font/rasa_bold"
+                    android:text="@string/pani_bandh_register"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_bareli_serdi_report"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_pani_bandh_register"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/square_border_dashboard"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_15sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:src="@drawable/ic_bareli_serdi_report" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:fontFamily="@font/rasa_bold"
+                    android:text="@string/bareli_serdi_report"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_khetar_mapni_gaam_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_bareli_serdi_report"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/square_border_dashboard"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_15sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:src="@drawable/ic_khetar_mapni_gaam_list" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:fontFamily="@font/rasa_bold"
+                    android:text="@string/khetar_mapni_gaam_list"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_ropan_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_khetar_mapni_gaam_list"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/square_border_dashboard"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_15sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:src="@drawable/ic_ropan_register" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:fontFamily="@font/rasa_bold"
+                    android:text="@string/ropan_register"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_sabhasad_mahiti"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_ropan_register"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/square_border_dashboard"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_15sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:src="@drawable/ic_sabhasad_mahiti" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:fontFamily="@font/rasa_bold"
+                    android:text="@string/sabhasad_mahiti"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_sabhasad_mahiti_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_sabhasad_mahiti"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/square_border_dashboard"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_15sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:src="@drawable/ic_sabhasad_mahiti_update" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:fontFamily="@font/rasa_bold"
+                    android:text="@string/sabhasad_mahiti_badalo"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_kapni_puri_aheval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_sabhasad_mahiti_update"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/square_border_dashboard"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_15sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:src="@drawable/ic_kapni_puri_aheval" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:fontFamily="@font/rasa_bold"
+                    android:text="@string/kapni_puri_aheval"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_kapni_puri_mahiti"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_kapni_puri_aheval"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/square_border_dashboard"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_15sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:src="@drawable/ic_kapni_puri_mahiti" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:fontFamily="@font/rasa_bold"
+                    android:text="@string/kapni_puri_thayani_mahiti"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_pani_bandh_yadi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_kapni_puri_mahiti"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/square_border_dashboard"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_15sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:src="@drawable/ic_pani_bandh_yadi" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:fontFamily="@font/rasa_bold"
+                    android:text="@string/pani_bandh_yadi"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_chahero_odakh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_pani_bandh_yadi"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/square_border_dashboard"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_15sdp">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_face"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    app:cardCornerRadius="@dimen/_8sdp"
+                    android:elevation="10dp"
+                    android:layout_marginEnd="@dimen/_2sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_supervisor_face"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_scan"
+                        android:scaleType="centerCrop"
+                        android:padding="@dimen/_1sdp"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:fontFamily="@font/rasa_bold"
+                    android:text="@string/chehro_odakh_nondhni"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_below="@+id/linear_chahero_odakh" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

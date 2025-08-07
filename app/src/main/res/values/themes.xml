@@ -1,0 +1,122 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.Narmada" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/secondary</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.NoActionBar" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/secondary</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.NoActionBar2" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/secondary</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor">?attr/colorOnPrimary</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.FullScreen" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/secondary</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="MyDialogTheme" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <!-- Fill the screen -->
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <!-- No backgrounds, titles or window float -->
+        <!--<item name="android:statusBarColor" tools:targetApi="lollipop">@color/colorPrimaryDark</item>-->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <!-- Just to prove it's working -->
+        <item name="android:background">@android:color/transparent</item>
+        <item name="actionMenuTextColor">@color/primary</item>
+    </style>
+
+    <style name="myToolbarTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorControlNormal">@color/primary</item>
+        <item name="android:textColorSecondary">@color/primary</item>
+        <item name="android:textColorPrimary">@color/primary</item>
+    </style>
+
+    <style name="DialogAnimations" />
+
+    <style name="DialogAnimations.SmileWindow">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_top</item>
+    </style>
+
+    <style name="Regular">
+        <item name="android:fontFamily">@font/rasa_regular</item>
+        <item name="fontFamily">@font/rasa_regular</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="InternRegular">
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="InternSemiBold">
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Bold">
+        <item name="android:fontFamily">@font/rasa_bold</item>
+        <item name="fontFamily">@font/rasa_bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Light">
+        <item name="android:fontFamily">@font/rasa_light</item>
+        <item name="fontFamily">@font/rasa_light</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="GujRegular">
+        <item name="android:fontFamily">@font/shree_guj</item>
+        <item name="fontFamily">@font/shree_guj</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+</resources>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".screens.khetarmapni.view.MapKhetarMapniAutoActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_simple" />
+
+    <!--<com.google.android.gms.maps.MapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar" />-->
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:src="@drawable/ic_direction_up"
+        android:layout_toLeftOf="@id/txt_north"
+        android:layout_below="@id/toolbar"
+        android:padding="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_4sdp"/>
+
+    <TextView
+        android:id="@+id/txt_north"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:fontFamily="@font/rasa_regular"
+        android:text="@string/north"
+        android:textColor="@color/white"
+        android:shadowColor="@color/black"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="12"
+        android:textSize="@dimen/_17sdp"
+        tools:ignore="RelativeOverlap" />
+    <TextView
+        android:id="@+id/txt_south"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/rasa_regular"
+        android:text="@string/south"
+        android:textColor="@color/white"
+        android:shadowColor="@color/black"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="12"
+        android:textSize="@dimen/_17sdp"
+        tools:ignore="RelativeOverlap" />
+
+    <TextView
+        android:id="@+id/txt_west"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_alignParentStart="true"
+        android:fontFamily="@font/rasa_regular"
+        android:text="@string/west"
+        android:textColor="@color/white"
+        android:shadowColor="@color/black"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="12"
+        android:textSize="@dimen/_17sdp"
+        tools:ignore="RelativeOverlap" />
+
+    <TextView
+        android:id="@+id/txt_east"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:fontFamily="@font/rasa_regular"
+        android:text="@string/east"
+        android:textColor="@color/white"
+        android:shadowColor="@color/black"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="12"
+        android:textSize="@dimen/_17sdp"
+        tools:ignore="RelativeOverlap" />
+
+    <RelativeLayout
+        android:id="@+id/relative_submit"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_65sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/button_circle_green"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/txt_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:fontFamily="@font/rasa_regular"
+            android:text="@string/prakriya_saru_guj"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_17sdp"
+            tools:ignore="RelativeOverlap" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:src="@drawable/ic_right_arrow_white" />
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_area"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_65sdp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/relative_submit"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        app:cardCornerRadius="@dimen/_30sdp"
+        app:cardBackgroundColor="@color/primary"
+        app:cardElevation="1dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/txt_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rasa_regular"
+            tools:text="Area : \n1 Acres \n2 Guntha"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp"
+            tools:ignore="RelativeOverlap"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:layout_gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
